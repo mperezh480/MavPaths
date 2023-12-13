@@ -20,6 +20,7 @@ html,
               cursor: pointer; 
             }
 
-#college, #nameSelect, #unoSelect, #search, #searchInput ,#school{
+#college, #nameSelect, #unoSelect, #search, #searchInput ,#school, #choiceSearch{
  width:250px;   
 }
+
