@@ -10,8 +10,8 @@
   <body>
    <body>
         <section id="main">
-            
             <!--college selection-->
+            <form>
             <label for="college_choice">Community/ Tribal College</label>
             <br>
             <select name="college" id="choice1" onchange="selectOption()">
@@ -27,35 +27,43 @@
                 <option value="western">Western Nebraska Community College</option>
             </select>
           
-
+          
             <br><br>
-            <label for="college_choice">Community/ Tribal College Degree</label><br>
-            
-            
-  
-            <select id="nameSelect">
+            <label for="college_choice">Community/ Tribal College Degree</label><br>  
+            <select id="nameSelect" onchange="selectcoll()">
                 <option value="none">Select A Degree</option>
             <!-- I want them here -->
-            </select>
-            <br>
-            <p id="un">noting</p>
+            </select><p id=ex>nothig</p>
 
             <br><br>
+            <!--<p id="demo">noting</p> -->
             <label for="college_choice">UNO Degree</label><br>
             <select id="unoSelect">
-                <option value="none">Select A Degree</option>
+                
             <!-- I want them here -->
             </select>
+            <br><br>
+            <button type="submit" class="test" style="height:20px;width:80px">Submit<i class="fa fa-search"></i></button>
+            <br>
+          </form>
 
 
-            
-
-            <br><br><br><br>
+            <br>
+            <hr>  
+            <br>
             <label for="search">Search by UNO Degree</label>
             <form class="example" action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <input type="text" placeholder="Search.." name="search" id="searchInput">
+             <ul id="searchResults"></ul>
+             <label for="college_search">Community/ Tribal College</label>
+             <br>
+            <select name="college_S" id="choiceSearch" onchange="selectOption()">
+                <option value="none">Select A School</option>
+            </select>
+            <br><br>
+            <button type="submit" class="test" style="height:20px;width:80px">Submit<i class="fa fa-search"></i></button>
             </form>
+            </section>
   </body>
 
 </html>
