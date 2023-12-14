@@ -7,63 +7,63 @@
     <script src="script.js"></script>
   </head>
 
-  <body>
-   <body>
-        <section id="main">
-            <!--college selection-->
-            <form>
-            <label for="college_choice">Community/ Tribal College</label>
-            <br>
-            <select name="college" id="choice1" onchange="selectOption()">
-                <option value="none">Select A School</option>
-                <option value="central">Central Community College</option>
-                <option value="iowawest">Iowa Western Community College</option>
-                <option value="littlePriest">Little Priest Tribal College</option>
-                <option value="metro">Metropolitan Community College</option>
-                <option value="neIndian">Nebraska Indian Community College</option>
-                <option value="northEast">Northeast Community College</option>
-                <option value="southEast">Southeast Community College</option>
-                <option value="wayne">Wayne State College</option>
-                <option value="western">Western Nebraska Community College</option>
-            </select>
-          
-          
-            <br><br>
-            <label for="college_choice">Community/ Tribal College Degree</label><br>  
-            <select id="nameSelect" onchange="selectcoll()">
-                <option value="none">Select A Degree</option>
-            <!-- I want them here -->
-            </select><p id=ex>nothig</p>
+    <body>
+      <section id="main">
+        <!--college selection-->
+        <form>
+        <label for="college_choice">Community/ Tribal College</label>
+        <br>
+        <select name="college" id="choice1" onchange="selectOption()">
+            <option value="none">Select A School</option>
+            <option value="central">Central Community College</option>
+            <option value="iowawest">Iowa Western Community College</option>
+            <option value="littlePriest">Little Priest Tribal College</option>
+            <option value="metro">Metropolitan Community College</option>
+            <option value="neIndian">Nebraska Indian Community College</option>
+            <option value="northEast">Northeast Community College</option>
+            <option value="southEast">Southeast Community College</option>
+            <option value="wayne">Wayne State College</option>
+            <option value="western">Western Nebraska Community College</option>
+        </select>
+      
+      
+        <br><br>
 
-            <br><br>
-            <!--<p id="demo">noting</p> -->
-            <label for="college_choice">UNO Degree</label><br>
-            <select id="unoSelect">
-                
-            <!-- I want them here -->
-            </select>
-            <br><br>
-            <button type="submit" class="test" style="height:20px;width:80px">Submit<i class="fa fa-search"></i></button>
-            <br>
-          </form>
+        <label for="college_choice">Community/ Tribal College Degree</label><br>  
+        <select id="nameSelect" onclick="selectcoll()">
+            
+        </select>
+        <p id=ex>nothig</p>
+
+        <br><br>
+
+        <label for="college_choice">UNO Degree</label><br>
+        <select id="unoSelect">
+        </select>
+
+        <br><br>
+
+            <button onclick="change()">Submit</button>
+        </form>
+        <br>
 
 
-            <br>
-            <hr>  
-            <br>
-            <label for="search">Search by UNO Degree</label>
-            <form class="example" action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search" id="searchInput">
-             <ul id="searchResults"></ul>
-             <label for="college_search">Community/ Tribal College</label>
-             <br>
-            <select name="college_S" id="choiceSearch" onchange="selectOption()">
-                <option value="none">Select A School</option>
-            </select>
-            <br><br>
-            <button type="submit" class="test" style="height:20px;width:80px">Submit<i class="fa fa-search"></i></button>
-            </form>
-            </section>
+        <br>
+        <hr>  
+        <br>
+        <label for="search">Search by UNO Degree</label>
+        <form class="example" action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search" id="searchInput">
+          <ul id="searchResults"></ul>
+          <label for="college_search">Community/ Tribal College</label>
+          <br>
+        <select name="college_S" id="choiceSearch" onchange="selectOption()">
+            <option value="none">Select A School</option>
+        </select>
+        <br><br>
+        <button type="submit" class="test" style="height:20px;width:80px">Submit<i class="fa fa-search"></i></button>
+        </form>
+        </section>
   </body>
 
 </html>
