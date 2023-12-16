@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>script.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>script.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-1">&#x00a7;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">selectOption</span>(<span class="hljs-params"></span>) {
+<span class="hljs-keyword">let</span> dropdown = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;choice1&#x27;</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-2">&#x00a7;</a>
+              </div>
+              <p>get the index of the selected option</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">let</span> selectedIndex = dropdown.<span class="hljs-property">selectedIndex</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-3">&#x00a7;</a>
+              </div>
+              <p>get a selected option and text value using the text property</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">let</span> selectedValue = dropdown.<span class="hljs-property">options</span>[selectedIndex].<span class="hljs-property">text</span>;
+                
+
+
+    <span class="hljs-keyword">switch</span>(selectedValue) {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Select A School&quot;</span>:
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">empty</span>();
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=none&gt;Select A Degree&lt;/option&gt;&quot;</span>);
+        <span class="hljs-keyword">const</span> clear = [
+            <span class="hljs-string">&quot;Select A Degree&quot;</span>,
+            ];
+            <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; clear.<span class="hljs-property">length</span>; i++ ) {
+                $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + clear[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + clear[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+            }
+        <span class="hljs-keyword">break</span>;
+
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Central Community College&quot;</span>:
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">empty</span>();
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=none&gt;Select A Degree&lt;/option&gt;&quot;</span>);
+        <span class="hljs-keyword">const</span> cent = [
+            <span class="hljs-string">&quot;Architectural Engineering focus A.S&quot;</span>,
+            <span class="hljs-string">&quot;Civil Engineering focus A.S&quot;</span>,
+            <span class="hljs-string">&quot;Computer Engineering focus A.S&quot;</span>,
+            <span class="hljs-string">&quot;Construction Engineering focus A.S&quot;</span>,
+            <span class="hljs-string">&quot;Construction Management focus A.S&quot;</span>,
+            <span class="hljs-string">&quot;Criminology and Criminal Justice A.A&quot;</span>,
+            <span class="hljs-string">&quot;Electrical Engineering focus A.S&quot;</span>,
+            <span class="hljs-string">&quot;Theatre focus A.A&quot;</span>];
+
+
+            <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; cent.<span class="hljs-property">length</span>; i++ ) {
+                $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + cent[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + cent[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+            }
+        <span class="hljs-keyword">break</span>;
+    
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Iowa Western Community College&quot;</span>:
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">empty</span>();
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=none&gt;Select A Degree&lt;/option&gt;&quot;</span>);
+        <span class="hljs-keyword">const</span>  <span class="hljs-variable constant_">IWCC</span>= [<span class="hljs-string">&quot;Business Administration A.A&quot;</span>];
+            <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable constant_">IWCC</span>.<span class="hljs-property">length</span>; i++ ) {
+                $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + <span class="hljs-variable constant_">IWCC</span>[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + <span class="hljs-variable constant_">IWCC</span>[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+            }
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Little Priest Tribal College&quot;</span>:
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">empty</span>();
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=none&gt;Select A Degree&lt;/option&gt;&quot;</span>);
+        <span class="hljs-keyword">const</span>  <span class="hljs-variable constant_">LPTC</span>= [<span class="hljs-string">&quot;Biology A.S&quot;</span>, <span class="hljs-string">&quot;Business A.S&quot;</span>, <span class="hljs-string">&quot;Sociology focus A.A.L.A&quot;</span>];
+            <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable constant_">LPTC</span>.<span class="hljs-property">length</span>; i++ ) {
+                $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + <span class="hljs-variable constant_">LPTC</span>[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + <span class="hljs-variable constant_">LPTC</span>[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+            }
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Metropolitan Community College&quot;</span>:
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">empty</span>();
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=none&gt;Select A Degree&lt;/option&gt;&quot;</span>);
+        <span class="hljs-keyword">const</span>  <span class="hljs-variable constant_">MCC</span>= [
+            <span class="hljs-string">&quot;Architectural Engineering focus L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Aviation focus L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Biology focus L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Fire Science Technology F.S.A.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Fire Service Management L.A.T.A.A&quot;</span>,
+            <span class="hljs-string">&quot;Business Administration (BSTAA) A.A&quot;</span>,
+            <span class="hljs-string">&quot;Chemistry focus L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Civil Engineering focus L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Communication Studies focus L.A.T.A.A&quot;</span>,
+            <span class="hljs-string">&quot;Computer Engineering focus L.A.T.A.A&quot;</span>,
+            <span class="hljs-string">&quot;Computer Science (CTSAS) A.S&quot;</span>,
+            <span class="hljs-string">&quot;Construction Engineering focus L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Construction Management focus L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Criminal Justice A.S&quot;</span>,
+            <span class="hljs-string">&quot;Education - Elementary Education focus (STEM Concentration) L.A.T.A.A&quot;</span>,
+            <span class="hljs-string">&quot;Education - Secondary Education focus (Biology Endorsement) L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Education - Secondary Education focus (Chemistry Endorsement) L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Education - Secondary Education focus (English Language Arts Endorsement) L.A.T.A.A&quot;</span>,
+            <span class="hljs-string">&quot;Education - Secondary Education focus (Mathematics Endorsement) L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Education - Secondary Education focus (Science Endorsement) L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Education - Secondary Education focus (Social Science Endorsement) L.A.T.A.A&quot;</span>,
+            <span class="hljs-string">&quot;Electronic Engineering focus L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;English (American Literature, British/Irish/Anglophone Literature, Language Studies Concentrations) L.A.T.A.A&quot;</span>,
+            <span class="hljs-string">&quot;English (Creative Nonfiction Concentration) L.A.T.A.A&quot;</span>,
+            <span class="hljs-string">&quot;Enviromental Engineering focus L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Mathematics focus L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Managment Information Systems (CTMAS) A.S&quot;</span>,
+            <span class="hljs-string">&quot;Physics focus L.A.T.A.S&quot;</span>,
+            <span class="hljs-string">&quot;Political Science focus L.A.T.A.A&quot;</span>,
+            <span class="hljs-string">&quot;Psycology focus L.A.T.A.A&quot;</span>,
+            <span class="hljs-string">&quot;Public Health focus L.A.T.A.A&quot;</span>,
+            <span class="hljs-string">&quot;Studio Art (2-D Arts) ARTAA&quot;</span>,
+            <span class="hljs-string">&quot;Studio Art (3-D Arts) ARTAA&quot;</span>,
+            <span class="hljs-string">&quot;Studio Art (Graphic Design) ARTAA&quot;</span>,
+            <span class="hljs-string">&quot;Studio Art (Media Art) ARTAA&quot;</span>,
+            <span class="hljs-string">&quot;Studio Art (Studio Art with K-12 Cert) ARTAA&quot;</span>,
+            <span class="hljs-string">&quot;Sociology focus L.A.T.A.A&quot;</span>,
+            <span class="hljs-string">&quot;Social Work (Human Services Transfer) HSTAA&quot;</span>
+        ];
+            <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable constant_">MCC</span>.<span class="hljs-property">length</span>; i++ ) {
+                $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + <span class="hljs-variable constant_">MCC</span>[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + <span class="hljs-variable constant_">MCC</span>[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+            }
+    <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Mid-Plains Community College&quot;</span>:
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">empty</span>();
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=none&gt;Select A Degree&lt;/option&gt;&quot;</span>);
+        <span class="hljs-keyword">const</span>  <span class="hljs-variable constant_">MPCC</span>= [
+            <span class="hljs-string">&quot;Civil Engineering focus A.S&quot;</span>,
+            <span class="hljs-string">&quot;Computer Engineering focus A.S&quot;</span>,
+            <span class="hljs-string">&quot;Construction Engineering focus A.S&quot;</span>,
+            <span class="hljs-string">&quot;Construction Management focus A.S&quot;</span>,
+            <span class="hljs-string">&quot;Electrical Engineering focus A.S&quot;</span>
+        ];
+            <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable constant_">MPCC</span>.<span class="hljs-property">length</span>; i++ ) {
+                $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + <span class="hljs-variable constant_">MPCC</span>[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + <span class="hljs-variable constant_">MPCC</span>[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+            }
+    <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Nebraska Indian Community College&quot;</span>:
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">empty</span>();
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=none&gt;Select A Degree&lt;/option&gt;&quot;</span>);
+        <span class="hljs-keyword">const</span>  <span class="hljs-variable constant_">NICC</span>= [<span class="hljs-string">&quot;General Studies A.A.&quot;</span>, <span class="hljs-string">&quot;General Liberal Arts(Emergency Management, Concentration in Criminology and Criminal Justice focus) A.A.&quot;</span>, <span class="hljs-string">&quot;Native American Studies (Contemporary Tribal Leadership Emphasis) A.A.&quot;</span>,<span class="hljs-string">&quot;Native American Studies (History and Traditional Culture Emphasis) A.A&quot;</span>]
+            
+            <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable constant_">NICC</span>.<span class="hljs-property">length</span>; i++ ) {
+                $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + <span class="hljs-variable constant_">NICC</span>[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + <span class="hljs-variable constant_">NICC</span>[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+            }
+    <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Northeast Community College&quot;</span>:
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">empty</span>();
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=none&gt;Select A Degree&lt;/option&gt;&quot;</span>);
+        <span class="hljs-keyword">const</span>  <span class="hljs-variable constant_">NCC</span> = [
+        <span class="hljs-string">&quot;Architectural Engineering focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Business Administration A.A&quot;</span>,
+        <span class="hljs-string">&quot;Civil Engineering focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Computer Engineering focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Construction Engineering focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Construction Management focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Criminal Justice [Corrections Concentration] A.A&quot;</span>,
+        <span class="hljs-string">&quot;Criminal Justice [Law Enforcement Concentration] A.A&quot;</span>,
+        <span class="hljs-string">&quot;Electrical Engineering focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Graphic Design A.A&quot;</span>,
+        <span class="hljs-string">&quot;Social Work A.A&quot;</span>,
+        <span class="hljs-string">&quot;Theatre A.A&quot;</span>
+        ];
+
+            <span class="hljs-keyword">for</span> ( i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable constant_">NCC</span>.<span class="hljs-property">length</span>; i++ ) {
+                $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + <span class="hljs-variable constant_">NCC</span>[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + <span class="hljs-variable constant_">NCC</span>[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+            }
+    <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Southeast Community College&quot;</span>:
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">empty</span>();
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=none&gt;Select A Degree&lt;/option&gt;&quot;</span>);
+        <span class="hljs-keyword">const</span>  <span class="hljs-variable constant_">SCC</span>= [
+        <span class="hljs-string">&quot;Architectural Engineering focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Business Administration A.A&quot;</span>,
+        <span class="hljs-string">&quot;Civil Engineering focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Computer Engineering focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Construction Engineering focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Construction Management focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Criminology and Criminal Justice A.A&quot;</span>,
+        <span class="hljs-string">&quot;Electrical Engineering focus A.S&quot;</span>
+        ];
+
+            <span class="hljs-keyword">for</span> ( i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable constant_">SCC</span>.<span class="hljs-property">length</span>; i++ ) {
+                $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + <span class="hljs-variable constant_">SCC</span>[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + <span class="hljs-variable constant_">SCC</span>[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+            }
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Wayne State College&quot;</span>:
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">empty</span>();
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=none&gt;Select A Degree&lt;/option&gt;&quot;</span>);
+        <span class="hljs-keyword">const</span>  <span class="hljs-variable constant_">WSC</span>= [<span class="hljs-string">&quot;Coursework (Pre-Engineering focus)&quot;</span>];
+            <span class="hljs-keyword">for</span> ( i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable constant_">WSC</span>.<span class="hljs-property">length</span>; i++ ) {
+                $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + <span class="hljs-variable constant_">WSC</span>[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + <span class="hljs-variable constant_">WSC</span>[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+            }
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Western Nebraska Community College&quot;</span>:
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">empty</span>();
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=none&gt;Select A Degree&lt;/option&gt;&quot;</span>);
+        <span class="hljs-keyword">const</span>  <span class="hljs-variable constant_">WNCC</span>= [
+        <span class="hljs-string">&quot;Architectural Engineering focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Civil Engineering focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Computer Engineering focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Construction Engineering focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Construction Management focus A.S&quot;</span>,
+        <span class="hljs-string">&quot;Electrical Engineering focus A.S&quot;</span>];
+
+            <span class="hljs-keyword">for</span> ( i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-variable constant_">WNCC</span>.<span class="hljs-property">length</span>; i++ ) {
+                $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + <span class="hljs-variable constant_">WNCC</span>[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + <span class="hljs-variable constant_">WNCC</span>[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+            }
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-attr">default</span>:
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">empty</span>();
+        $(<span class="hljs-string">&quot;#nameSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=none&gt;Select A Degree&lt;/option&gt;&quot;</span>);
+    } 
+}
+
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">selectcoll</span>(<span class="hljs-params"></span>) {
+<span class="hljs-keyword">let</span> dropdown = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&#x27;nameSelect&#x27;</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-4">&#x00a7;</a>
+              </div>
+              <p>get the index of the selected option</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">let</span> selectedIndex = dropdown.<span class="hljs-property">selectedIndex</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-5">&#x00a7;</a>
+              </div>
+              <p>get a selected option and text value using the text property</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">let</span> selectedValue = dropdown.<span class="hljs-property">options</span>[selectedIndex].<span class="hljs-property">text</span>;
+
+    <span class="hljs-keyword">switch</span>(selectedValue) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Architectural Engineering focus A.S&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Architectural Engineering focus L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> arch = [<span class="hljs-string">&quot;B.S. in Architectural Engineering&quot;</span>,];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arch.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + arch[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + arch[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Civil Engineering focus A.S&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Civil Engineering focus L.A.T.A.S&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Coursework (Pre-Engineering focus)&quot;</span>:
+            <span class="hljs-keyword">const</span> civ = [<span class="hljs-string">&quot;B.S in Civil Engineering&quot;</span>,];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; civ.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + civ[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + civ[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Computer Engineering focus A.S&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Computer Engineering focus L.A.T.A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> comp = [<span class="hljs-string">&quot;B.S in Computer Engineering&quot;</span>,];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; comp.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + comp[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + comp[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Construction Engineering focus A.S&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Construction Engineering focus L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> cone = [<span class="hljs-string">&quot;B.S in Construction Engineering&quot;</span>,];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; cone.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + con[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + con[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Construction Management focus A.S&quot;</span>:
+        <span class="hljs-keyword">case</span>  <span class="hljs-string">&quot;Construction Management focus L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> conm = [<span class="hljs-string">&quot;B.S in Construction Management&quot;</span>,];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; conm.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + conm[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + conm[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Criminology and Criminal Justice A.A&quot;</span>:  
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Criminal Justice A.S&quot;</span>: 
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Criminal Justice [Corrections Concentration] A.A&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Criminal Justice [Law Enforcement Concentration] A.A&quot;</span>:        
+            <span class="hljs-keyword">const</span> crim = [<span class="hljs-string">&quot;B.S in Criminology and Criminal Justice&quot;</span>,];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; crim.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + crim[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + crim[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Electrical Engineering focus A.S&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Electronic Engineering focus L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> ele = [<span class="hljs-string">&quot;B.S. in Electrical Engineering&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; ele.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + ele[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + ele[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Theatre focus A.A&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Theatre A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> tre = [<span class="hljs-string">&quot;B.A in Theatre &quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; tre.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + tre[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + tre[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Business Administration A.A&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Business A.S&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Business Administration (BSTAA) A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> ba = [<span class="hljs-string">&quot;B.S in Business Administration (BSBA)&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; ba.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + ba[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + ba[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Biology A.S&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Biology focus L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> bio = [<span class="hljs-string">&quot;B.S in Biology&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; bio.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + bio[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + bio[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Sociology focus A.A.L.A&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Sociology focus L.A.T.A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> soc = [<span class="hljs-string">&quot;B.A in Sociology &quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; soc.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + soc[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + soc[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Aviation focus L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> avi = [<span class="hljs-string">&quot;B.S in Aviation &quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; avi.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + avi[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + avi[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Fire Science Technology F.S.A.A.S&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Fire Service Management L.A.T.A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> fire= [<span class="hljs-string">&quot;B.S. in Emergency Management, Concentration in Fire Service Management&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; fire.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + fire[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + fire[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Chemistry focus L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> chem = [<span class="hljs-string">&quot;B.S. in Chemistry&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; chem.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + chem[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + chem[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Communication Studies focus L.A.T.A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> comm = [<span class="hljs-string">&quot;B.A. in Communication Studies, Minor in Journalism and Media Communication&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; comm.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + comm[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + comm[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Computer Science (CTSAS) A.S&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Computer Engineering focus A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> comsci = [<span class="hljs-string">&quot;B.S. in Computer Science&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; comsci.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + comsci[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + comsci[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Education - Elementary Education focus (STEM Concentration) L.A.T.A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> ee = [<span class="hljs-string">&quot;B.S. in Education - Elementary Education&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; ee.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + ee[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + ee[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Education - Secondary Education focus (Biology Endorsement) L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> sess = [<span class="hljs-string">&quot;B.S. in Education - Secondary Education (Social Science Endorsement)&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; sess.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + sess[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + sess[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Education - Secondary Education focus (Biology Endorsement) L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> sech = [<span class="hljs-string">&quot;B.S. in Education - Secondary Education (Chemistry Endorsement)&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; sess.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + sess[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + sess[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Education - Secondary Education focus (English Language Arts Endorsement) L.A.T.A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> sela = [<span class="hljs-string">&quot;B.S. in Education - Secondary Education (English Language Arts Endorsement)&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; sela.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + sela[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + sela[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Education - Secondary Education focus (Mathematics Endorsement) L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> sem = [<span class="hljs-string">&quot;B.S. in Education - Secondary Education (Mathematics Endorsement)&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; sem.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + sem[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + sem[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Education - Secondary Education focus (Science Endorsement) L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> ses = [<span class="hljs-string">&quot;B.S. in Education - Secondary Education (Science Endorsement)&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; ses.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + ses[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + ses[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Education - Secondary Education focus (Social Science Endorsement) L.A.T.A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> seso = [<span class="hljs-string">&quot;B.S. in Education - Secondary Education (Social Science Endorsement)&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; seso.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + seso[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + seso[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;English (American Literature, British/Irish/Anglophone Literature, Language Studies Concentrations) L.A.T.A.A&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;English (American Literature, British/Irish/Anglophone Literature, Language Studies Concentrations) L.A.T.A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> eng = [<span class="hljs-string">&quot;B.A. in English&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; eng.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + eng[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + eng[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Enviromental Engineering focus L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> ene = [<span class="hljs-string">&quot;B.S. in Environmental Engineering&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; ene.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + ene[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + ene[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Mathematics focus L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> math = [<span class="hljs-string">&quot;B.S. in Mathematics&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; math.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + math[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + math[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Managment Information Systems (CTMAS) A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> mis = [<span class="hljs-string">&quot;B.S. in Management Information Systems (BIS)&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; mis.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + mis[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + mis[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Physics focus L.A.T.A.S&quot;</span>:
+            <span class="hljs-keyword">const</span> phy = [<span class="hljs-string">&quot;B.S. in Physics&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; phy.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + phy[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + phy[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Political Science focus L.A.T.A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> poli = [<span class="hljs-string">&quot;B.S. in Political Science&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; poli.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + poli[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + poli[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Psycology focus L.A.T.A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> psy = [<span class="hljs-string">&quot;B.A. in Psychology&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; psy.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + psy[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + psi[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Public Health focus L.A.T.A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> publ = [<span class="hljs-string">&quot; B.S. in Public Health&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; publ.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + publ[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + publ[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Studio Art (2-D Arts) ARTAA&quot;</span>:
+            <span class="hljs-keyword">const</span> td = [<span class="hljs-string">&quot;B.A. in Studio Art, concentration in 2-D Arts&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; td.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + td[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + td[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Studio Art (3-D Arts) ARTAA&quot;</span>:
+            <span class="hljs-keyword">const</span> thd = [<span class="hljs-string">&quot;B.A. in Studio Art, concentration in 3-D Arts&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; thd.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + thd[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + thd[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Studio Art (Graphic Design) ARTAA&quot;</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Graphic Design A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> ga = [<span class="hljs-string">&quot;B.A. in Studio Art, concentration in Graphic Designs&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; ga.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + ga[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + ga[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Studio Art (Media Art) ARTAA&quot;</span>:
+            <span class="hljs-keyword">const</span> med = [<span class="hljs-string">&quot;B.A. in Studio Art, concentration in Media Arts&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; med.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + med[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + med[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Studio Art (Studio Art with K-12 Cert) ARTAA&quot;</span>:
+            <span class="hljs-keyword">const</span> k = [<span class="hljs-string">&quot;B.A. in Studio Art, concentration in Studio Art with K-12 Certification concentration&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; k.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + k[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + k[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Social Work (Human Services Transfer) HSTAA&quot;</span>:
+        <span class="hljs-keyword">case</span>  <span class="hljs-string">&quot;Social Work A.A&quot;</span>:
+            <span class="hljs-keyword">const</span> hst = [<span class="hljs-string">&quot;B.S. in Social Work&quot;</span>];
+                <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; hst.<span class="hljs-property">length</span>; i++ ) {
+                    $(<span class="hljs-string">&quot;#unoSelect&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;&lt;option value=&quot;</span> + hst[i] +<span class="hljs-string">&quot;&gt;&quot;</span> + hst[i] + <span class="hljs-string">&quot;&lt;/option&gt;&quot;</span>);
+                }
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-attr">default</span>:
+            <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;ex&quot;</span>).<span class="hljs-property">innerHTML</span> = <span class="hljs-string">&quot;You selected noting&quot;</span>;
+        } 
+}
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">change</span>(<span class="hljs-params"></span>){
+    <span class="hljs-variable language_">window</span>.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;https://www.unomaha.edu/registrar/students/before-you-enroll/transfer-credit/guided-pathways/ccc/ccc-arch.eng.php&#x27;</span>, <span class="hljs-string">&#x27;_blank&#x27;</span>);
+}</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
